@@ -1,11 +1,9 @@
 // dependencies
 const express = require("express");
 const router = express.Router();
-// creates a random id
 const uuid = require("uuid");
-// brings in the DB class object
-const DB = require("../db/DB");
-
+const path = require("path"); // Import the 'path' module
+const DB = require(path.join(__dirname, "..", "db", "DB")); // Update the file path for DB.js
 
 // route to get notes
 router.get("/api/notes", async function (req, res) {
