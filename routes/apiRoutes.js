@@ -1,21 +1,44 @@
-//require dependencies
-const express = require('express');
+// dependencies
+const express = require("express");
+const router = express.Router();
+// creates a random id
+const uuid = require("uuid");
+// brings in the DB class object
+const DB = require("../db/DB");
 
-//create express app
-const app = express();
+// route to get notes
+router.get("/api/notes", async function (req, res) {
+  const notes = await DB.readNotes();
+  return res.json(notes);
+});
 
-//create a PORT variable
-const PORT = process.env.PORT || 3000;
+// route to add a new note and add it to the json file
+router.post("/api/notes", async function (req, res) {
+  const currentNotes = await DB.readNotes();
+  let newNote = {
+    id: uuid(),
+    title: req.body.title,
+    text: req.body.text,
+  };
 
-//set up express to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
+  await DB.addNote([...currentNotes, newNote]);
 
-const apiRoutes = require("./routes/apiRoutes");
-app.use(apiRoutes);
-const htmlRoutes = require("./routes/htmlRoutes");
-app.use(htmlRoutes);
+  return res.send(newNote);
+});
 
-//create server listener
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+// // route to delete notes
+router.delete("/api/notes/:id", async function (req, res) {
+  // separates out the note to delete based on id
+  const noteToDelete = req.params.id;
+  // notes already in json file
+  const currentNotes = await DB.readNotes();
+  // sort through notes file and create a new array minus the note in question
+  const newNoteData = currentNotes.filter((note) => note.id !== noteToDelete);
+
+  // sends the new array back the DB class 
+  await DB.deleteNote(newNoteData);
+  
+  return res.send(newNoteData);
+});
+
+module.exports = router;npm 
