@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const uuid = require("uuid");
 const path = require("path"); // Import the 'path' module
-const DB = require(path.join(__dirname, "..", "db", "DB")); // Update the file path for DB.js
+const DB = require("../db/DB");
 
 // route to get notes
 router.get("/api/notes", async function (req, res) {
@@ -40,4 +40,4 @@ router.delete("/api/notes/:id", async function (req, res) {
   return res.send(newNoteData);
 });
 
-module.exports = router;npm 
+module.exports = router;
