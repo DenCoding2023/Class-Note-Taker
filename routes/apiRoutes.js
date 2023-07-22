@@ -6,6 +6,7 @@ const uuid = require("uuid");
 // brings in the DB class object
 const DB = require("../db/DB");
 
+
 // route to get notes
 router.get("/api/notes", async function (req, res) {
   const notes = await DB.readNotes();
