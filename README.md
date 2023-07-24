@@ -1,13 +1,10 @@
-
-# all-the-notes
-
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-
-
+# Class Note Taker
 
 ## Description
 
-Creating a note-taking application using Express.js as a student is an exciting project for me. It offers a fantastic opportunity to gain hands-on experience in web development while utilizing a popular and widely-used framework. With Express.js, I can build a robust and efficient server-side application that meets my specific needs as a student. I can incorporate features like organization, search functionality, and collaboration to enhance my note-taking experience. This project will also deepen my understanding of database management and authentication, sharpening my overall web development skills. Most importantly, having a personalized note-taking app tailored to my study routine will significantly boost my productivity and learning outcomes.
+In this challenge I needed to create an application that takes notes. The application requires you to use (Express.js),  back end and will retrieve data from a JSON File. 
+In this project I had the opportunity to use a framework system with Express. I use the server side application that meets the requirements to take notes. 
+
 
 ## Table of Contents
 
@@ -15,7 +12,6 @@ Creating a note-taking application using Express.js as a student is an exciting 
 - [Usage](#usage)
 - [License](#license)
 - [Credits](#credits)
-- [Tests](#tests)
 - [Contact](#contact)
 
 ## Installation
@@ -24,34 +20,35 @@ No installation necessary, but if you wanted to run it locally:
 
 1. Ensure Node.js and npm are installed.
 2. Install the project dependencies (express, jest).
-3. Clone this repository git@github.com:justjenb/all-the-notes.git.
-4. Start your NPM server and navigate to your localhost and selected port.
-5. Use the web app to add/remove notes from the db.json file.
+3. Clone this repository: github.com/DenCoding2023/Class-Note-Taker.git
+4. Start your NPM server and navigate to your localhost 3001.
+5. Use the note taker feature to save and delete files.
 
 ## Usage
 
-[Link to Live App](https://immense-beach-55992.herokuapp.com/)
+[Link to the appsite:](https://class-note-taker-5939c5a02e4a.herokuapp.com/)
 
-![App screenshot](./public/assets/images/screenshot.png)
+![Alt text](<public/assets/images/note taker heroku.jpg>)
+
+![Alt text](<public/assets/images/note taker.jpg>)
 
 ## License
 
-**This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.**
-
-For more information about this license, please visit the following link:
-
-https://opensource.org/licenses/MIT
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Credits
 
-Borrowed heavily from previous modules.
-
-References
+Borrowed from previous modules.
+## References
  
+ Used several resouces to help and assist. 
+1. https://youtu.be/SyiL0J80gDQ
+2. https://github.com/its-jefe/Note-Taker.git
+3. https://james-fisher-web-developer.com/pages/express-note-taker.html
+4. Helped with route and server (jroyston) from ASK ABCS
 
-## Tests
-
-No tests.
 
 ## Contact
 
+1. Dennis Luciano
+2. visiontopia@gmail.com
