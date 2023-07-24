@@ -1,0 +1,25 @@
+# Node.js / Express.js specific
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.code-workspace
+
+# Environment specific
+.env
+.env.*
+
+# Build output
+build/
+dist/
+out/
+
+# Logs
+logs/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
